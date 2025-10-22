@@ -1,29 +1,19 @@
 {
-  "headers": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Credentials", "value": "true" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-        }
-      ]
+      "src": "next.config.js",
+      "use": "@vercel/next"
     }
   ],
+  "framework": "nextjs",
+  "installCommand": "pnpm install --filter ./apps/web...",
+  "buildCommand": "pnpm --filter ./apps/web... build",
+  "outputDirectory": ".next",
   "env": {
-    "NEXT_PUBLIC_API_BASE_URL": "https://emberidge.vercel.app/api",
-    "NEXT_PUBLIC_WEBSITE_URL": "https://emberidge.vercel.app/"
+    "NEXT_PUBLIC_API_URL": "https://api.yourdomain.com"
   },
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_API_BASE_URL": "https://emberidge.vercel.app/api",
-      "NEXT_PUBLIC_WEBSITE_URL": "https://emberidge.vercel.app"
-    }
+  "github": {
+    "silent": false
   }
 }

@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "next.config.js",
+        "use": "@vercel/next"
+      }
+    ],
+    "framework": "nextjs",
+    "installCommand": "pnpm install --filter ./apps/admin...",
+    "buildCommand": "pnpm --filter ./apps/admin... build",
+    "outputDirectory": ".next",
+    "env": {
+      "NEXT_PUBLIC_API_URL": "https://api.yourdomain.com"
+    },
+    "github": {
+      "silent": false
+    }
+  }
+  
