@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Baby & Kids",
+    "slug": "baby-kids",
+    "type": "mega",
+    "productCount": "50",
+    "image": {
+      "id": 1,
+      "thumbnail": "/assets/images/category/baby.jpg"
+    },
+    "children": [
+      {
+        "id": 1,
+        "name": "Stroller",
+        "slug": "stroller"
+      },
+      {
+        "id": 2,
+        "name": "Clothes",
+        "slug": "clothes"
+      },
+      {
+        "id": 3,
+        "name": "Towels",
+        "slug": "towels"
+      },
+      {
+        "id": 4,
+        "name": "Baby Crib Bedding",
+        "slug": "baby-crib-bedding"
+      },
+      {
+        "id": 5,
+        "name": "Pacifiers",
+        "slug": "pacifiers"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Accessories",
+    "slug": "accessories",
+    "type": "mega",
+    "productCount": "20",
+    "image": {
+      "id": 1,
+      "thumbnail": "/assets/images/category/accessories.jpg"
+    },
+    "children": [
+      {
+        "id": 1,
+        "name": "Chains",
+        "slug": "chains"
+      },
+      {
+        "id": 2,
+        "name": "Rings",
+        "slug": "rings"
+      }
+    ]
+  }
+]
