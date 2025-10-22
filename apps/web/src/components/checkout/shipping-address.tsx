@@ -26,7 +26,7 @@ interface ShippingAddressProps {
   onComplete: (data: Address & { selectedAddressId?: string }) => void;
 }
 
-const ShippingAddress: React.FC<ShippingAddressProps> = ({ onComplete }) => {
+const ShippingAddress = ({ onComplete }: ShippingAddressProps) => {
   const { data: addresses = [], isLoading } = useAddressesQuery();
   const deleteMutation = useDeleteAddressMutation();
   const { openModal } = useModal();
@@ -150,13 +150,13 @@ const ShippingAddress: React.FC<ShippingAddressProps> = ({ onComplete }) => {
                 </h4>
                 <div className="grid grid-cols-1 gap-2">
                   <div className="flex items-center gap-2">
-                    <Home className="w-4 h-4 text-primary flex-shrink-0" />
+                    <Home className="w-4 h-4 text-primary shrink-0" />
                     <span className="text-sm font-medium text-card-foreground capitalize">
                       {address.fullName}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+                    <Phone className="w-4 h-4 text-primary shrink-0" />
                     <span className="text-sm text-card-foreground">
                       {address.phoneNumber}
                     </span>

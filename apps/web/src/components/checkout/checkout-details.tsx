@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Heading from "@/components/shared/heading";
-import ShippingAddress from "./shipping-address";
-import { MapPinHouse, CreditCard } from "lucide-react";
+import { MapPin, CreditCard } from "lucide-react";
 import PaymentMethodSelector from "./paymentm-method-selector";
+import ShippingAddress from "./shipping-address";
 
 type CheckoutStep = "shipping" | "payment";
 
@@ -23,7 +23,7 @@ const CheckoutDetails: React.FC = () => {
   const steps = [
     {
       id: 1,
-      icon: <MapPinHouse strokeWidth={1} size={28} />,
+      icon: <MapPin strokeWidth={1} size={28} />,
       title: "Shipping Address",
       sub: "Where should we deliver your order?",
       component: <ShippingAddress onComplete={handleShippingComplete} />,

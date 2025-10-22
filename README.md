@@ -61,8 +61,19 @@ PORT=5000
 MONGO_URI=mongodb+srv://...
 STRIPE_SECRET_KEY=sk_test_...
 JWT_SECRET=your_secret
+
+
 Development
-pnpm dev
+
+pnpm --filter ./apps/web dev
+pnpm --filter ./apps/admin dev
+pnpm --filter ./apps/backend dev
+
+pnpm dev:web
+pnpm dev:admin
+pnpm dev:api
+
+
 
 Turborepo will run:
 
