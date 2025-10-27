@@ -93,6 +93,5 @@ Dockerfile*
 *.sublime-workspace
 
 # Local database / storage files
-data/
 db.sqlite
 db.sqlite3
