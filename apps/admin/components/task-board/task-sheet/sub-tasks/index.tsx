@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/collapsible";
 import TaskItem from "./task-item";
 import AddSubTask from "./add-sub-task";
-import { type Task as TaskType } from "@/api/tasks/data";
-import { type SubTask as SubTaskType } from "@/api/tasks/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
+import { type SubTask as SubTaskType } from "@/app/api/tasks/data";
 const SubTasks = ({ subTasks, taskId }: {
   subTasks: SubTaskType[];
   taskId: TaskType["id"];

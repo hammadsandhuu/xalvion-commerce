@@ -12,7 +12,7 @@ import { addSubTaskAction } from "@/action/project-action";
 const schema = z.object({
   title: z.string().min(2, { message: "title lagbe re vai ." }),
 });
-import { type Task as TaskType } from "@/api/tasks/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
 const AddSubTask = ({ taskId }: { taskId: TaskType["id"] }) => {
   const [isPending, startTransition] = React.useTransition();
   const {

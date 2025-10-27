@@ -6,7 +6,7 @@ import { formatDate } from "@/lib/utils";
 import { postCommentAction } from "@/action/project-action";
 import avatar from "@/public/images/avatar/avatar-7.jpg";
 import { SendHorizontal } from "lucide-react";
-import { type Task as TaskType } from "@/api/tasks/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
 const CommentFooter = ({ taskId }: {
   taskId?: TaskType["id"];
 }) => {

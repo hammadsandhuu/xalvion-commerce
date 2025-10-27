@@ -21,7 +21,7 @@ import { deleteBoardAction } from "@/action/project-action";
 import DeleteConfirmationDialog from "@/components/delete-confirmation-dialog";
 import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
-import { type Board as BoardType } from  "@/api/boards/data";;
+import { type Board as BoardType } from "@/app/api/boards/data";
 interface TaskListProps {
   board: BoardType;
   onEdit: (board: BoardType) => void;

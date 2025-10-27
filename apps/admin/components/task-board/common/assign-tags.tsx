@@ -14,7 +14,7 @@ import { updateTaskAction } from "@/action/project-action";
 import { Input } from "@/components/ui/input";
 import { CustomPopover } from "@/components/ui/popover";
 import { Badge } from "@/components/ui/badge";
-import { type Task as TaskType } from "@/api/tasks/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
 
 const newtags = [
   {

@@ -28,8 +28,8 @@ import DeleteConfirmationDialog from "@/components/delete-confirmation-dialog";
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import Task from "./task";
-import { type Board as BoardType } from "@/api/boards/data";
-import { type Task as TaskType } from "@/api/tasks/data";
+import { type Board as BoardType } from "@/app/api/boards/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
 interface TaskBoardProps {
   board: BoardType;
   children?: React.ReactNode;

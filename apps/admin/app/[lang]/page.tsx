@@ -1,5 +1,8 @@
-import { redirect } from "next/navigation";
+import React from "react";
+import LandingPage from "@/components/landing-page";
 
-export default async function HomePage() {
-  redirect("/auth/login");
-}
+const page = () => {
+  return <LandingPage />;
+};
+
+export default page;

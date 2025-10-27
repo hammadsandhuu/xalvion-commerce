@@ -29,10 +29,10 @@ import {
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import { editBoardAction, swapBoardAction } from "@/action/project-action";
-import { type Board as BoardType } from "@/api/boards/data";
-import { type Task as TaskType } from "@/api/tasks/data";
-import { type SubTask as SubTaskType } from "@/api/tasks/data";
-import { type Comment as CommentType } from "@/api/comments/data";
+import { type Board as BoardType } from "@/app/api/boards/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
+import { type SubTask as SubTaskType } from "@/app/api/tasks/data";
+import { type Comment as CommentType } from "@/app/api/comments/data";
 const wait = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 interface TaskBoardProps {

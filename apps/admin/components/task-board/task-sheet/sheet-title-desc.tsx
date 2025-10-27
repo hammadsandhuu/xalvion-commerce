@@ -7,7 +7,7 @@ import { updateTaskAction } from "@/action/project-action";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { type Task as TaskType } from "@/api/tasks/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
 const schema = z.object({
   title: z.string().min(1, {
     message: "What is your task title? ???",

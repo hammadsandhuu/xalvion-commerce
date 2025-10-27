@@ -9,6 +9,7 @@ const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 const compression = require("compression");
 const path = require("path");
+const app = express();
 
 const AppError = require("./utils/appError");
 const errorHandler = require("./middleware/error");
@@ -26,11 +27,7 @@ const shippingZoneRoutes = require("./routes/shippingZone.routes");
 const siteSettingRoutes = require("./routes/siteSetting.routes");
 const stripeWebhook = require("./routes/stripeWebhook.route");
 
-const app = express();
-
-// Webhook route before body parsing
 app.use("/api/stripe", stripeWebhook);
-
 // CORS
 app.use(cors());
 app.options("*", cors());
@@ -50,13 +47,12 @@ const limiter = rateLimit({
   message: "Too many requests from this IP, please try again in an hour!",
 });
 app.use("/api", limiter);
-
-// Body parsing
+// Body parser
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use(cookieParser());
 
-// Data sanitization
+// Sanitization
 app.use(mongoSanitize());
 app.use(xss());
 
@@ -76,13 +72,11 @@ app.use(
 
 // Compression
 app.use(compression());
-
-// Test route
 app.get("/", (req, res) => {
-  res.send("Hello World from Xalvion API 🚀");
+  res.send("Hello world");
 });
 
-// API routes
+// Routes
 app.use("/auth", authRoutes);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/categories", categoryRoutes);
@@ -97,12 +91,9 @@ app.use("/api/v1/admin/settings", siteSettingRoutes);
 
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
-
-// Handle unknown routes
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
-
 app.use(errorHandler);
 
 module.exports = app;

@@ -1,4 +1,4 @@
-# Emberidge Backend
+# Backend
 
 E-commerce backend API built with **Node.js**, **Express**, and **MongoDB**.  
 This backend is **secure, scalable, and production-ready**.  
@@ -9,9 +9,6 @@ It includes **JWT authentication, product management, file uploads, and security
 ## ⚡ Quick Start
 
 1️⃣ **Clone the repository:**
-```bash
-git clone https://github.com/yourusername/emberidge-backend.git
-cd emberidge-backend
 
 
 npm install

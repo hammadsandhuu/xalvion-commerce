@@ -4,17 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plus } from "lucide-react";
 
 const Skills = () => {
-  const adminSkills = [
-    "Admin",
-    "Administrator",
-    "Organization",
-    "Time Management",
-    "Communication",
-    "Problem-Solving",
-    "Attention to Detail",
-    "Customer Service",
-    "Multitasking",
-  ];
 
   return (
     <Card>
@@ -29,14 +18,14 @@ const Skills = () => {
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2 items-center">
-          {adminSkills.map((item, index) => (
-            <Badge
-              key={`skill-${index}`}
-              className="text-xs font-medium text-default-500 bg-default-100 dark:bg-default-50"
-            >
-              {item}
-            </Badge>
-          ))}
+          {
+            ["HTML", "HTML 5", "CSS", "JavaScript", "React", "Nextjs", "Vue JS", "Nuxt JS", "PHP",  "Tailwind"].map((item, index) => (
+              <Badge
+                key={`skill-${index}`}
+                className="text-xs font-medium text-default-500 bg-default-100 dark:bg-default-50"
+              >{item}</Badge>
+            ))
+          }
         </div>
       </CardContent>
     </Card>

@@ -29,7 +29,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import DeleteConfirmationDialog from "@/components/delete-confirmation-dialog";
-import { type SubTask as SubTaskType } from "@/api/tasks/data";
+import { type SubTask as SubTaskType } from "@/app/api/tasks/data";
 const TaskItem = ({ subtask, handlerSubSheet }: {
   subtask: SubTaskType;
   handlerSubSheet: () => void;

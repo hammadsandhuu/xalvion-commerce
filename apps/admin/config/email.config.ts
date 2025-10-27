@@ -1,5 +1,5 @@
 import { api } from "@/config/axios.config";
-import { type Mail } from "@/api/email/data";
+import { type Mail } from "@/app/api/email/data";
 export const getEmails = async () => {
   try {
     const response = await api.get(`/email`);

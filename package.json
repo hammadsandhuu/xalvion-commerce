@@ -7,7 +7,7 @@
     "dev": "turbo run dev --parallel",
     "dev:web": "pnpm --filter ./apps/web dev",
     "dev:admin": "pnpm --filter ./apps/admin dev",
-    "dev:api": "pnpm --filter ./apps/backend dev",
+    "dev:backend": "pnpm --filter ./apps/backend dev",
 
     "// build scripts": "",
     "build": "turbo run build",

@@ -13,10 +13,10 @@ import { cn } from "@/lib/utils";
 import Attachments from "./attachments";
 import SheetActions from "./sheet-actions";
 import { X } from "lucide-react";
-import { type Board as BoardType } from "@/api/boards/data";
-import { type Task as TaskType } from "@/api/tasks/data";
-import { type SubTask as SubTaskType } from "@/api/tasks/data";
-import { type Comment as CommentType } from "@/api/comments/data";
+import { type Board as BoardType } from "@/app/api/boards/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
+import { type SubTask as SubTaskType } from "@/app/api/tasks/data";
+import { type Comment as CommentType } from "@/app/api/comments/data";
 
 interface TaskSheetProps {
   open: boolean;

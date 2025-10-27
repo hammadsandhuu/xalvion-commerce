@@ -21,7 +21,7 @@ import {
 
 import { X } from "lucide-react";
 import { Label } from "@/components/ui/label";
-import { type Board as BoardType } from  "@/api/boards/data";;
+import { type Board as BoardType } from "@/app/api/boards/data";
 const schema = z.object({
   name: z.string().min(2, { message: "Your email is invalid." }),
   status: z.string().optional(),

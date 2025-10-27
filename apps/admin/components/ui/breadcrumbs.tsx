@@ -221,9 +221,9 @@ const BreadcrumbItem = React.forwardRef<HTMLSpanElement, any>(
     },
     ref
   ) => {
-    const ariaCurrent = iscurrent ? "page" : undefined;
-    const dataState = iscurrent ? "active" : undefined;
-    const dataDisabled = disabled && !iscurrent ? "true" : undefined;
+    const ariaCurrent = iscurrent ? "page" : null;
+    const dataState = iscurrent ? "active" : null;
+    const dataDisabled = disabled && !iscurrent ? "true" : null;
 
     const handleClick = () => {
       if (onAction && !iscurrent) {
@@ -261,7 +261,6 @@ const BreadcrumbItem = React.forwardRef<HTMLSpanElement, any>(
     );
   }
 );
-
 
 BreadcrumbItem.displayName = "BreadcrumbItem";
 

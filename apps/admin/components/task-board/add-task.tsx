@@ -16,7 +16,7 @@ import Select from "react-select";
 import { addTaskAction } from "@/action/project-action";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
-import { type Board as BoardType } from  "@/api/boards/data";;
+import { type Board as BoardType } from "@/app/api/boards/data";
 const options = [
   { value: "plan-2023", label: "Plan 2023" },
   { value: "plan-2024", label: "Plan 2024" },

@@ -63,8 +63,8 @@ const tagsColorMap: { [key: string]: any } = {
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-import { type Board as BoardType } from "@/api/boards/data";
-import { type Task as TaskType } from "@/api/tasks/data";
+import { type Board as BoardType } from "@/app/api/boards/data";
+import { type Task as TaskType } from "@/app/api/tasks/data";
 interface TaskProps {
   task: TaskType;
   onUpdateTask: (task: TaskType) => void;
