@@ -143,10 +143,13 @@
     "@svgr/webpack": "^8.1.0",
     "@types/d3-shape": "^3.1.7",
     "@types/dagre": "^0.7.53",
+    "@types/leaflet": "^1.9.21",
     "@types/next": "^9.0.0",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.3.0",
+    "eslint-config-prettier": "^8.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
     "typescript": "^5.4.5"
   }
 }

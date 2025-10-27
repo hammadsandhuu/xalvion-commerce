@@ -1,4 +1,5 @@
 "use client";
+
 import { Inter } from "next/font/google";
 import { useThemeStore } from "@/store";
 import { ThemeProvider } from "next-themes";
@@ -9,49 +10,29 @@ import { SonnToaster } from "@/components/ui/sonner";
 import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
-const Providers = ({ children }: { children: React.ReactNode }) => {
+
+type ProvidersProps = {
+  children: React.ReactNode;
+};
+
+const Providers = ({ children }: ProvidersProps) => {
   const { theme, radius } = useThemeStore();
   const location = usePathname();
 
-  if (location === "/") {
-    return (
-      <body className={cn("dash-tail-app ", inter.className)}>
-        <ThemeProvider
-          attribute="class"
-          enableSystem={false}
-          defaultTheme="light"
-        >
-          <div className={cn("h-full  ")}>
-            {children}
-            <ReactToaster />
-          </div>
-          <Toaster />
-          <SonnToaster />
-        </ThemeProvider>
-      </body>
-    );
-  }
+  const baseClass = cn("dash-tail-app", inter.className);
+
   return (
-    <body
-      className={cn("dash-tail-app ", inter.className, "theme-" + theme)}
-      style={{
-        "--radius": `${radius}rem`,
-      } as React.CSSProperties
-      }
-    >
-      <ThemeProvider
-        attribute="class"
-        enableSystem={false}
-        defaultTheme="light"
+    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
+      <div
+        className={location === "/" ? baseClass : cn(baseClass, "theme-" + theme)}
+        style={{ "--radius": `${radius}rem` } as React.CSSProperties}
       >
-        <div className={cn("h-full  ")}>
-          {children}
-          <ReactToaster />
-        </div>
+        {children}
+        <ReactToaster />
         <Toaster />
         <SonnToaster />
-      </ThemeProvider>
-    </body>
+      </div>
+    </ThemeProvider>
   );
 };
 
